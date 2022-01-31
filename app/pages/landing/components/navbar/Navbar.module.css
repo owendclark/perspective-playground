@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 2rem;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.link {
+  color: unset;
+  text-decoration: none;
+}
+
+.signUpButtons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav p,
+.signUpButtons p,
+.menu p {
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.signUpButtons button,
+.menu button {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: #ff4820;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.menu {
+  margin-left: 1rem;
+  display: none;
+  position: relative;
+}
+
+.menu svg {
+  cursor: pointer;
+}
+
+.menuPopUp {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: end;
+  background: #031b34;
+  padding: 2rem;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin-top: 1rem;
+  min-width: 210px;
+  border-radius: 5px;
+  box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.menuPopUp p {
+  margin: 1rem 0;
+}
+
+.menuPopUpButtons {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .nav {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    padding: 2rem;
+  }
+
+  .signUpButtons {
+    display: none;
+  }
+
+  .menuPopUp {
+    top: 20px;
+  }
+
+  .menuPopUpButtons {
+    display: block;
+  }
+}
